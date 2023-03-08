@@ -4,7 +4,8 @@ graph = {'0': set(['1', '2']),
          '3': set(['1']),
          '4': set(['1']),
          '5': set(['5'])}
-
+visited = []
+queue = []
 def bfs(visited, graph, node):
     global queue
     visited.append(node)
@@ -17,4 +18,4 @@ def bfs(visited, graph, node):
                 visited.append(neighbour)
                 queue.append(neighbour)
 
-print(bfs(visited, graph, '1'))
+print(bfs(visited, graph, '3'))
